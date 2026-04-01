@@ -1,0 +1,3242 @@
+[
+  {
+    "id": "q_001",
+    "texto": "¿Quién es el/la más despistado/a del grupo?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_002",
+    "texto": "¿Quién sería el/la primero/a en llegar tarde?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_003",
+    "texto": "¿Quién tiene más probabilidades de perder el móvil?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_004",
+    "texto": "¿Quién ha llegado tarde alguna vez?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_005",
+    "texto": "¿Quién suele olvidar las cosas?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_006",
+    "texto": "¿Quién es el/la más bromista del grupo?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_007",
+    "texto": "¿Quién sería el/la primero/a en hacer el ridículo?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_008",
+    "texto": "¿Quién tiene más probabilidades de comer demasiado?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_009",
+    "texto": "¿Quién ha olvidado algo importante alguna vez?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_010",
+    "texto": "¿Quién suele contar chistes malos?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_011",
+    "texto": "¿Quién es el/la más desorganizado/a del grupo?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_012",
+    "texto": "¿Quién sería el/la primero/a en meterse en un líos?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_013",
+    "texto": "¿Quién tiene más probabilidades de tropezar?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_014",
+    "texto": "¿Quién ha hecho algo tonto alguna vez?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_015",
+    "texto": "¿Quién suele reírse de todo?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_016",
+    "texto": "¿Quién es el/la más desordenado/a del grupo?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_017",
+    "texto": "¿Quién sería el/la primero/a en romper algo?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_018",
+    "texto": "¿Quién tiene más probabilidades de perderse?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_019",
+    "texto": "¿Quién ha pasado vergüenza alguna vez?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_020",
+    "texto": "¿Quién suele comer entre horas?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_021",
+    "texto": "¿Quién es el/la más impuntual del grupo?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_022",
+    "texto": "¿Quién sería el/la primero/a en dormirse en público?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_023",
+    "texto": "¿Quién tiene más probabilidades de llegar desordenado?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_024",
+    "texto": "¿Quién ha comido algo extraño alguna vez?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_025",
+    "texto": "¿Quién suele hablar dormido?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_026",
+    "texto": "¿Quién es el/la más torpe del grupo?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_027",
+    "texto": "¿Quién sería el/la primero/a en cambiar de opinión?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_028",
+    "texto": "¿Quién tiene más probabilidades de cantar en público?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_029",
+    "texto": "¿Quién ha cantado desafinado alguna vez?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_030",
+    "texto": "¿Quién suele llorar con películas?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_031",
+    "texto": "¿Quién es el/la más chistoso/a del grupo?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_032",
+    "texto": "¿Quién sería el/la primero/a en confesar algo incómodo?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_033",
+    "texto": "¿Quién tiene más probabilidades de gastar dinero impulsivamente?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_034",
+    "texto": "¿Quién ha gastado dinero en algo tonto alguna vez?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_035",
+    "texto": "¿Quién suele comprar cosas que no necesita?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_036",
+    "texto": "¿Quién es el/la más perezoso/a del grupo?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_037",
+    "texto": "¿Quién sería el/la primero/a en saltarse una clase?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_038",
+    "texto": "¿Quién tiene más probabilidades de llegar en pijama?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_039",
+    "texto": "¿Quién ha ido sin dormir alguna vez?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_040",
+    "texto": "¿Quién suele ver videos sin subtítulos?",
+    "categoria": "divertida",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_041",
+    "texto": "¿Quién es el/la más vago/a del grupo?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_042",
+    "texto": "¿Quién sería el/la primero/a en saltar de una cama?",
+    "categoria": "divertida",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_043",
+    "texto": "¿Quién tiene más probabilidades de ser puntual?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_044",
+    "texto": "¿Quién ha ayudado a alguien alguna vez?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_045",
+    "texto": "¿Quién suele escuchar a los demás?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_046",
+    "texto": "¿Quién es el/la más simpático/a del grupo?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_047",
+    "texto": "¿Quién sería el/la primero/a en dar el primer paso?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_048",
+    "texto": "¿Quién tiene más probabilidades de consolar a alguien?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_049",
+    "texto": "¿Quién ha dado un consejo sabio alguna vez?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_050",
+    "texto": "¿Quién suele animar a los demás?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_051",
+    "texto": "¿Quién es el/la más generoso/a del grupo?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_052",
+    "texto": "¿Quién sería el/la primero/a en disculparse?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_053",
+    "texto": "¿Quién tiene más probabilidades de ser honesto?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_054",
+    "texto": "¿Quién ha perdonado a un amigo alguna vez?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_055",
+    "texto": "¿Quién suele decir la verdad?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_056",
+    "texto": "¿Quién es el/la más amable del grupo?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_057",
+    "texto": "¿Quién sería el/la primero/a en defender a un amigo?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_058",
+    "texto": "¿Quién tiene más probabilidades de ser leal?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_059",
+    "texto": "¿Quién ha cuidado a alguien enfermo alguna vez?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_060",
+    "texto": "¿Quién suele ser paciente con los demás?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_061",
+    "texto": "¿Quién es el/la más bondadoso/a del grupo?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_062",
+    "texto": "¿Quién sería el/la primero/a en ofrecer ayuda?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_063",
+    "texto": "¿Quién tiene más probabilidades de ser empático/a?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_064",
+    "texto": "¿Quién ha motivado a alguien alguna vez?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_065",
+    "texto": "¿Quién suele hacer sentir mejor a los demás?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_066",
+    "texto": "¿Quién es el/la más solidario/a del grupo?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_067",
+    "texto": "¿Quién sería el/la primero/a en compartir lo que tiene?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_068",
+    "texto": "¿Quién tiene más probabilidades de sonreír?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_069",
+    "texto": "¿Quién ha recibido un regalo sorpresa alguna vez?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_070",
+    "texto": "¿Quién suele disculparse cuando se equivoca?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_071",
+    "texto": "¿Quién es el/la más confiable del grupo?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_072",
+    "texto": "¿Quién sería el/la primero/a en creer en ti?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_073",
+    "texto": "¿Quién tiene más probabilidades de ser sincero?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_074",
+    "texto": "¿Quién ha guardado un secreto alguna vez?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_075",
+    "texto": "¿Quién suele ser honrado?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_076",
+    "texto": "¿Quién es el/la más instruido/a del grupo?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_077",
+    "texto": "¿Quién sería el/la primero/a en resolver un problema?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_078",
+    "texto": "¿Quién tiene más probabilidades de tener una buena idea?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_079",
+    "texto": "¿Quién ha aprendido algo importante alguna vez?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_080",
+    "texto": "¿Quién suele aprender rápido?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_081",
+    "texto": "¿Quién es el/la más responsable del grupo?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_082",
+    "texto": "¿Quién sería el/la primero/a en cumplir una promesa?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_083",
+    "texto": "¿Quién tiene más probabilidades de ser maduro/a?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_084",
+    "texto": "¿Quién ha hecho cambios positivos alguna vez?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_085",
+    "texto": "¿Quién suele ser sensato?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_086",
+    "texto": "¿Quién es el/la más justo/a del grupo?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_087",
+    "texto": "¿Quién sería el/la primero/a en mediar en un conflicto?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_088",
+    "texto": "¿Quién tiene más probabilidades de ser ecuánime?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_089",
+    "texto": "¿Quién ha sido imparcial alguna vez?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_090",
+    "texto": "¿Quién suele tomar buenas decisiones?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_091",
+    "texto": "¿Quién es el/la más aventurero/a del grupo?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_092",
+    "texto": "¿Quién sería el/la primero/a en viajar?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_093",
+    "texto": "¿Quién tiene más probabilidades de soñar en grande?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_094",
+    "texto": "¿Quién ha viajado a un lugar lejano alguna vez?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_095",
+    "texto": "¿Quién suele tener metas claras?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_096",
+    "texto": "¿Quién es el/la más ambicioso/a del grupo?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_097",
+    "texto": "¿Quién sería el/la primero/a en triunfar?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_098",
+    "texto": "¿Quién tiene más probabilidades de alcanzar sus sueños?",
+    "categoria": "positiva",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_099",
+    "texto": "¿Quién ha perseguido un objetivo alguna vez?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_100",
+    "texto": "¿Quién suele ser persistente?",
+    "categoria": "positiva",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_101",
+    "texto": "¿Quién es el/la más atrevido/a del grupo?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_102",
+    "texto": "¿Quién sería el/la primero/a en besarse con alguien?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": true,
+    "activa": true
+  },
+  {
+    "id": "q_103",
+    "texto": "¿Quién tiene más probabilidades de tener un romance?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_104",
+    "texto": "¿Quién ha estado enamorado/a alguna vez?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_105",
+    "texto": "¿Quién suele tener citas?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_106",
+    "texto": "¿Quién es el/la más seductor/a del grupo?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_107",
+    "texto": "¿Quién sería el/la primero/a en una cita romántica?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_108",
+    "texto": "¿Quién tiene más probabilidades de ser infiel?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_109",
+    "texto": "¿Quién ha engañado en una relación alguna vez?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": true,
+    "activa": true
+  },
+  {
+    "id": "q_110",
+    "texto": "¿Quién suele flirtear?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_111",
+    "texto": "¿Quién es el/la más coqueto/a del grupo?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_112",
+    "texto": "¿Quién sería el/la primero/a en hacer una confesión incómoda?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_113",
+    "texto": "¿Quién tiene más probabilidades de ser apasionado/a?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_114",
+    "texto": "¿Quién ha besado a más de una persona alguna vez?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": true,
+    "activa": true
+  },
+  {
+    "id": "q_115",
+    "texto": "¿Quién suele tener opiniones fuertes?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_116",
+    "texto": "¿Quién es el/la más provocador/a del grupo?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_117",
+    "texto": "¿Quién sería el/la primero/a en decir algo inapropiado?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_118",
+    "texto": "¿Quién tiene más probabilidades de tomar riesgos?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_119",
+    "texto": "¿Quién ha hecho algo prohibido alguna vez?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_120",
+    "texto": "¿Quién suele ser descarado/a?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_121",
+    "texto": "¿Quién es el/la más atractivo/a del grupo?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_122",
+    "texto": "¿Quién sería el/la primero/a en un viaje de fin de semana?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_123",
+    "texto": "¿Quién tiene más probabilidades de ser impulsivo/a?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_124",
+    "texto": "¿Quién ha hecho algo arrebatado alguna vez?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_125",
+    "texto": "¿Quién suele actuar sin pensar?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_126",
+    "texto": "¿Quién es el/la más temerario/a del grupo?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_127",
+    "texto": "¿Quién sería el/la primero/a en una apuesta arriesgada?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_128",
+    "texto": "¿Quién tiene más probabilidades de guardar un secreto oscuro?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_129",
+    "texto": "¿Quién ha ocultado algo importante alguna vez?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_130",
+    "texto": "¿Quién suele ser reservado/a?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_131",
+    "texto": "¿Quién es el/la más misterioso/a del grupo?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_132",
+    "texto": "¿Quién sería el/la primero/a en mentir descaradamente?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_133",
+    "texto": "¿Quién tiene más probabilidades de ser poco fiable?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_134",
+    "texto": "¿Quién ha traicionado la confianza alguna vez?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_135",
+    "texto": "¿Quién suele romper promesas?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_136",
+    "texto": "¿Quién es el/la más controlador/a del grupo?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_137",
+    "texto": "¿Quién sería el/la primero/a en ser posesivo?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_138",
+    "texto": "¿Quién tiene más probabilidades de ser celoso/a?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_139",
+    "texto": "¿Quién ha tenido celos alguna vez?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_140",
+    "texto": "¿Quién suele ser inseguro/a?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_141",
+    "texto": "¿Quién es el/la más sensible del grupo?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_142",
+    "texto": "¿Quién sería el/la primero/a en llorar?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_143",
+    "texto": "¿Quién tiene más probabilidades de enamorarse fácilmente?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_144",
+    "texto": "¿Quién ha sufrido un desengaño amoroso alguna vez?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_145",
+    "texto": "¿Quién suele tener el corazón roto?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_146",
+    "texto": "¿Quién es el/la más romántico/a del grupo?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_147",
+    "texto": "¿Quién sería el/la primero/a en hacer una declaración?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_148",
+    "texto": "¿Quién tiene más probabilidades de ser perfeccionista?",
+    "categoria": "spicy",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_149",
+    "texto": "¿Quién ha sido obsesionado con alguien alguna vez?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_150",
+    "texto": "¿Quién suele ser obsesivo?",
+    "categoria": "spicy",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_151",
+    "texto": "¿Quién es el/la más competitivo/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_152",
+    "texto": "¿Quién sería el/la primero/a en ganar una competencia?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_153",
+    "texto": "¿Quién tiene más probabilidades de ser un ganador?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_154",
+    "texto": "¿Quién ha ganado algo importante alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_155",
+    "texto": "¿Quién suele ganar apuestas?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_156",
+    "texto": "¿Quién es el/la más sarcástico/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_157",
+    "texto": "¿Quién sería el/la primero/a en hacer una broma pesada?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_158",
+    "texto": "¿Quién tiene más probabilidades de ser irónico?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_159",
+    "texto": "¿Quién ha caído en una broma alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_160",
+    "texto": "¿Quién suele bromear constantemente?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_161",
+    "texto": "¿Quién es el/la más inteligente del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_162",
+    "texto": "¿Quién sería el/la primero/a en resolver un acertijo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_163",
+    "texto": "¿Quién tiene más probabilidades de ser un genio?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_164",
+    "texto": "¿Quién ha resuelto un problema difícil alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_165",
+    "texto": "¿Quién suele tener respuestas correctas?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_166",
+    "texto": "¿Quién es el/la más creativo/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_167",
+    "texto": "¿Quién sería el/la primero/a en tener una idea brillante?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_168",
+    "texto": "¿Quién tiene más probabilidades de ser artístico?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_169",
+    "texto": "¿Quién ha creado algo hermoso alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_170",
+    "texto": "¿Quién suele tener imaginación?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_171",
+    "texto": "¿Quién es el/la más técnico/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_172",
+    "texto": "¿Quién sería el/la primero/a en reparar algo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_173",
+    "texto": "¿Quién tiene más probabilidades de ser ingeniero?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_174",
+    "texto": "¿Quién ha construido algo desde cero alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_175",
+    "texto": "¿Quién suele entender de tecnología?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_176",
+    "texto": "¿Quién es el/la más deportista del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_177",
+    "texto": "¿Quién sería el/la primero/a en escalar una montaña?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_178",
+    "texto": "¿Quién tiene más probabilidades de ser atlético?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_179",
+    "texto": "¿Quién ha participado en un deporte competitivo alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_180",
+    "texto": "¿Quién suele hacer ejercicio?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_181",
+    "texto": "¿Quién es el/la más musical del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_182",
+    "texto": "¿Quién sería el/la primero/a en tocar un instrumento?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_183",
+    "texto": "¿Quién tiene más probabilidades de ser cantante?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_184",
+    "texto": "¿Quién ha tocado música en público alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_185",
+    "texto": "¿Quién suele escuchar música?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_186",
+    "texto": "¿Quién es el/la más cocinero/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_187",
+    "texto": "¿Quién sería el/la primero/a en cocinar una comida?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_188",
+    "texto": "¿Quién tiene más probabilidades de ser chef?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_189",
+    "texto": "¿Quién ha cocinado algo delicioso alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_190",
+    "texto": "¿Quién suele cocinar para los demás?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_191",
+    "texto": "¿Quién es el/la más viajero/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_192",
+    "texto": "¿Quién sería el/la primero/a en viajar solo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_193",
+    "texto": "¿Quién tiene más probabilidades de visitarte en otro país?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_194",
+    "texto": "¿Quién ha viajado al extranjero alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_195",
+    "texto": "¿Quién suele viajar con mochila?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_196",
+    "texto": "¿Quién es el/la más lector/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_197",
+    "texto": "¿Quién sería el/la primero/a en leer un libro entero?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_198",
+    "texto": "¿Quién tiene más probabilidades de escribir un libro?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_199",
+    "texto": "¿Quién ha leído un clásico alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_200",
+    "texto": "¿Quién suele leer antes de dormir?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_201",
+    "texto": "¿Quién es el/la más cinéfilo/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_202",
+    "texto": "¿Quién sería el/la primero/a en ver un filme clásico?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_203",
+    "texto": "¿Quién tiene más probabilidades de ver películas subtituladas?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_204",
+    "texto": "¿Quién ha visto una película en el cine alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_205",
+    "texto": "¿Quién suele llorar con películas románticas?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_206",
+    "texto": "¿Quién es el/la más gaming del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_207",
+    "texto": "¿Quién sería el/la primero/a en vencer un videojuego?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_208",
+    "texto": "¿Quién tiene más probabilidades de ser un profesional del gaming?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_209",
+    "texto": "¿Quién ha jugado videojuegos toda la noche alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_210",
+    "texto": "¿Quién suele jugar en equipo?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_211",
+    "texto": "¿Quién es el/la más natural del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_212",
+    "texto": "¿Quién sería el/la primero/a en abandonar la ciudad?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_213",
+    "texto": "¿Quién tiene más probabilidades de vivir en el campo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_214",
+    "texto": "¿Quién ha acampado al aire libre alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_215",
+    "texto": "¿Quién suele pasar tiempo en la naturaleza?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_216",
+    "texto": "¿Quién es el/la más urbano/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_217",
+    "texto": "¿Quién sería el/la primero/a en vivir en una metrópolis?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_218",
+    "texto": "¿Quién tiene más probabilidades de ser citadino?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_219",
+    "texto": "¿Quién ha explorado una ciudad desconocida alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_220",
+    "texto": "¿Quién suele estar siempre en movimiento?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_221",
+    "texto": "¿Quién es el/la más espiritual del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_222",
+    "texto": "¿Quién sería el/la primero/a en meditar?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_223",
+    "texto": "¿Quién tiene más probabilidades de creer en lo paranormal?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_224",
+    "texto": "¿Quién ha tenido una experiencia mística alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_225",
+    "texto": "¿Quién suele filosofar sobre la vida?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_226",
+    "texto": "¿Quién es el/la más escéptico/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_227",
+    "texto": "¿Quién sería el/la primero/a en cuestionar todo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_228",
+    "texto": "¿Quién tiene más probabilidades de ser ateo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_229",
+    "texto": "¿Quién ha rechazado una creencia alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_230",
+    "texto": "¿Quién suele dudar de la religión?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_231",
+    "texto": "¿Quién es el/la más optimista del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_232",
+    "texto": "¿Quién sería el/la primero/a en ver el lado positivo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_233",
+    "texto": "¿Quién tiene más probabilidades de tener fe en el futuro?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_234",
+    "texto": "¿Quién ha superado algo negativo alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_235",
+    "texto": "¿Quién suele tener esperanza?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_236",
+    "texto": "¿Quién es el/la más pesimista del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_237",
+    "texto": "¿Quién sería el/la primero/a en rendirse?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_238",
+    "texto": "¿Quién tiene más probabilidades de ver lo peor?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_239",
+    "texto": "¿Quién ha sentido desesperación alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_240",
+    "texto": "¿Quién suele tener pensamientos negativos?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_241",
+    "texto": "¿Quién es el/la más meticuloso/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_242",
+    "texto": "¿Quién sería el/la primero/a en ordenar algo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_243",
+    "texto": "¿Quién tiene más probabilidades de ser obsesionado con los detalles?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_244",
+    "texto": "¿Quién ha invertido tiempo en perfeccionar algo alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_245",
+    "texto": "¿Quién suele ser preciso en todo?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_246",
+    "texto": "¿Quién es el/la más relajado/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_247",
+    "texto": "¿Quién sería el/la primero/a en tomárselo con calma?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_248",
+    "texto": "¿Quién tiene más probabilidades de no estresarse?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_249",
+    "texto": "¿Quién ha meditado para calmarse alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_250",
+    "texto": "¿Quién suele respirar profundamente?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_251",
+    "texto": "¿Quién es el/la más ansioso/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_252",
+    "texto": "¿Quién sería el/la primero/a en preocuparse?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_253",
+    "texto": "¿Quién tiene más probabilidades de tener ataques de pánico?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_254",
+    "texto": "¿Quién ha sentido estrés importante alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_255",
+    "texto": "¿Quién suele tener ansiedad?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_256",
+    "texto": "¿Quién es el/la más extrovertido/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_257",
+    "texto": "¿Quién sería el/la primero/a en bailar en público?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_258",
+    "texto": "¿Quién tiene más probabilidades de ser la vida de la fiesta?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_259",
+    "texto": "¿Quién ha hablado con desconocidos alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_260",
+    "texto": "¿Quién suele socializar fácilmente?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_261",
+    "texto": "¿Quién es el/la más introvertido/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_262",
+    "texto": "¿Quién sería el/la primero/a en evitar una fiesta?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_263",
+    "texto": "¿Quién tiene más probabilidades de preferir estar solo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_264",
+    "texto": "¿Quién ha pasado un fin de semana en casa alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_265",
+    "texto": "¿Quién suele rehuir la compañía?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_266",
+    "texto": "¿Quién es el/la más amigable del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_267",
+    "texto": "¿Quién sería el/la primero/a en hacer nuevos amigos?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_268",
+    "texto": "¿Quién tiene más probabilidades de tener muchas amistades?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_269",
+    "texto": "¿Quién ha hecho amigos en un lugar inesperado alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_270",
+    "texto": "¿Quién suele ser el centro de atención?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_271",
+    "texto": "¿Quién es el/la más distante del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_272",
+    "texto": "¿Quién sería el/la primero/a en alejarse del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_273",
+    "texto": "¿Quién tiene más probabilidades de ser independiente?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_274",
+    "texto": "¿Quién ha roto lazos con alguien alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_275",
+    "texto": "¿Quién suele mantener distancia emocional?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_276",
+    "texto": "¿Quién es el/la más proche del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_277",
+    "texto": "¿Quién sería el/la primero/a en llamar por teléfono?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_278",
+    "texto": "¿Quién tiene más probabilidades de ser sentimental?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_279",
+    "texto": "¿Quién ha escrito una carta de amor alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_280",
+    "texto": "¿Quién suele demostrar sus sentimientos?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_281",
+    "texto": "¿Quién es el/la más orgulloso/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_282",
+    "texto": "¿Quién sería el/la primero/a en no pedir perdón?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_283",
+    "texto": "¿Quién tiene más probabilidades de ser terco?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_284",
+    "texto": "¿Quién ha guardado rencor alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_285",
+    "texto": "¿Quién suele ser inflexible?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_286",
+    "texto": "¿Quién es el/la más aburrido/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_287",
+    "texto": "¿Quién sería el/la primero/a en dormir en una fiesta?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_288",
+    "texto": "¿Quién tiene más probabilidades de ser sedentario?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_289",
+    "texto": "¿Quién ha visto un programa de televisión todo el día alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_290",
+    "texto": "¿Quién suele quedarse en casa?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_291",
+    "texto": "¿Quién es el/la más emocionante del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_292",
+    "texto": "¿Quién sería el/la primero/a en lanzarse de un acantilado?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_293",
+    "texto": "¿Quién tiene más probabilidades de buscar adrenalina?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_294",
+    "texto": "¿Quién ha probado algo extremo alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_295",
+    "texto": "¿Quién suele buscar nuevos retos?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_296",
+    "texto": "¿Quién es el/la más confiado/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_297",
+    "texto": "¿Quién sería el/la primero/a en confiar en un desconocido?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_298",
+    "texto": "¿Quién tiene más probabilidades de caer en una estafa?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_299",
+    "texto": "¿Quién ha sido engañado alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_300",
+    "texto": "¿Quién suele ser ingenuo?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_301",
+    "texto": "¿Quién es el/la más desconfiado/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_302",
+    "texto": "¿Quién sería el/la primero/a en sospechar de alguien?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_303",
+    "texto": "¿Quién tiene más probabilidades de ser paranoico?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_304",
+    "texto": "¿Quién ha tenido sentimientos de traición alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_305",
+    "texto": "¿Quién suele cuestionarse constantemente?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_306",
+    "texto": "¿Quién es el/la más aventado/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_307",
+    "texto": "¿Quién sería el/la primero/a en tomar un riesgo sin pensar?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_308",
+    "texto": "¿Quién tiene más probabilidades de tener un accidente?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_309",
+    "texto": "¿Quién ha tenido un accidente importante alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_310",
+    "texto": "¿Quién suele lastimarse accidentalmente?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_311",
+    "texto": "¿Quién es el/la más cuidadoso/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_312",
+    "texto": "¿Quién sería el/la primero/a en revisar todo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_313",
+    "texto": "¿Quién tiene más probabilidades de estar siempre atento?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_314",
+    "texto": "¿Quién ha evitado un accidente alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_315",
+    "texto": "¿Quién suele pensar antes de actuar?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_316",
+    "texto": "¿Quién es el/la más alcohólico/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_317",
+    "texto": "¿Quién sería el/la primero/a en emborracharse?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_318",
+    "texto": "¿Quién tiene más probabilidades de tener una resaca?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_319",
+    "texto": "¿Quién ha vomitado por alcohol alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_320",
+    "texto": "¿Quién suele beber en exceso?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_321",
+    "texto": "¿Quién es el/la más templadero/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_322",
+    "texto": "¿Quién sería el/la primero/a en rechazar una bebida?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_323",
+    "texto": "¿Quién tiene más probabilidades de ser sobrio?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_324",
+    "texto": "¿Quién ha permanecido sobrio en una fiesta alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_325",
+    "texto": "¿Quién suele controlar su consumo?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_326",
+    "texto": "¿Quién es el/la más fumador/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_327",
+    "texto": "¿Quién sería el/la primero/a en probar un cigarrillo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_328",
+    "texto": "¿Quién tiene más probabilidades de fumar regularmente?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_329",
+    "texto": "¿Quién ha fumado alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_330",
+    "texto": "¿Quién suele fumar constantemente?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_331",
+    "texto": "¿Quién es el/la más no fumador del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_332",
+    "texto": "¿Quién sería el/la primero/a en dejar de fumar?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_333",
+    "texto": "¿Quién tiene más probabilidades de no fumar nunca?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_334",
+    "texto": "¿Quién ha rechazado un cigarrillo alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_335",
+    "texto": "¿Quién suele promover la salud?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_336",
+    "texto": "¿Quién es el/la más saludable del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_337",
+    "texto": "¿Quién sería el/la primero/a en hacer dieta?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_338",
+    "texto": "¿Quién tiene más probabilidades de ir al gimnasio?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_339",
+    "texto": "¿Quién ha mantenido una dieta estricta alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_340",
+    "texto": "¿Quién suele mantener buenos hábitos?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_341",
+    "texto": "¿Quién es el/la más sedentario/a respecto a deportes?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_342",
+    "texto": "¿Quién sería el/la primero/a en saltarse el ejercicio?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_343",
+    "texto": "¿Quién tiene más probabilidades de odiar el ejercicio?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_344",
+    "texto": "¿Quién ha abandonado un gimnasio alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_345",
+    "texto": "¿Quién suele evitar el ejercicio?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_346",
+    "texto": "¿Quién es el/la más famoso/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_347",
+    "texto": "¿Quién sería el/la primero/a en ser una celebridad?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_348",
+    "texto": "¿Quién tiene más probabilidades de tener fama algún día?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_349",
+    "texto": "¿Quién ha conseguido reconocimiento público alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_350",
+    "texto": "¿Quién suele buscar la atención?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_351",
+    "texto": "¿Quién es el/la más anónimo/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_352",
+    "texto": "¿Quién sería el/la primero/a en pasar desapercibido?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_353",
+    "texto": "¿Quién tiene más probabilidades de ser invisible?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_354",
+    "texto": "¿Quién ha evitado la atención alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_355",
+    "texto": "¿Quién suele rechazar los focos?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_356",
+    "texto": "¿Quién es el/la más maduro/a del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_357",
+    "texto": "¿Quién sería el/la primero/a en actuar responsablemente?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_358",
+    "texto": "¿Quién tiene más probabilidades de ser sabio?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_359",
+    "texto": "¿Quién ha dado lecciones importantes alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_360",
+    "texto": "¿Quién suele actuar con criterio?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_361",
+    "texto": "¿Quién es el/la más infantil del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_362",
+    "texto": "¿Quién sería el/la primero/a en hacer locuras?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_363",
+    "texto": "¿Quién tiene más probabilidades de ser inmaduro?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_364",
+    "texto": "¿Quién ha hecho algo infantil de adulto alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_365",
+    "texto": "¿Quién suele actuar sin pensar en consecuencias?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_366",
+    "texto": "¿Quién es el/la más competente del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_367",
+    "texto": "¿Quién sería el/la primero/a en conseguir un trabajo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_368",
+    "texto": "¿Quién tiene más probabilidades de ser exitoso en su carrera?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_369",
+    "texto": "¿Quién ha logrado un objetivo profesional alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_370",
+    "texto": "¿Quién suele sacar lo mejor de sí mismo?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_371",
+    "texto": "¿Quién es el/la más incompetente del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_372",
+    "texto": "¿Quién sería el/la primero/a en fracasar?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_373",
+    "texto": "¿Quién tiene más probabilidades de perder un empleo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_374",
+    "texto": "¿Quién ha enfrentado un fracaso importante alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_375",
+    "texto": "¿Quién suele cometer errores en el trabajo?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_376",
+    "texto": "¿Quién es el/la más paciente del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_377",
+    "texto": "¿Quién sería el/la primero/a en esperar sin quejarse?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_378",
+    "texto": "¿Quién tiene más probabilidades de ser tolerante?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_379",
+    "texto": "¿Quién ha demostrado gran paciencia alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_380",
+    "texto": "¿Quién suele aguantar sin protestar?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_381",
+    "texto": "¿Quién es el/la más impaciente del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_382",
+    "texto": "¿Quién sería el/la primero/a en perder la paciencia?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_383",
+    "texto": "¿Quién tiene más probabilidades de ser intolerante?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_384",
+    "texto": "¿Quién ha explotado de frustración alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_385",
+    "texto": "¿Quién suele irritarse fácilmente?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_386",
+    "texto": "¿Quién es el/la más eficiente del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_387",
+    "texto": "¿Quién sería el/la primero/a en terminar una tarea?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_388",
+    "texto": "¿Quién tiene más probabilidades de ser productivo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_389",
+    "texto": "¿Quién ha completado un proyecto complejo alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_390",
+    "texto": "¿Quién suele lograr sus objetivos?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_391",
+    "texto": "¿Quién es el/la más ineficiente del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_392",
+    "texto": "¿Quién sería el/la primero/a en procrastinar?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_393",
+    "texto": "¿Quién tiene más probabilidades de ser improductivo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_394",
+    "texto": "¿Quién ha dejado una tarea sin terminar alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_395",
+    "texto": "¿Quién suele dejar las cosas para después?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_396",
+    "texto": "¿Quién es el/la más humilde del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_397",
+    "texto": "¿Quién sería el/la primero/a en admitir sus errores?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_398",
+    "texto": "¿Quién tiene más probabilidades de ser modesto?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_399",
+    "texto": "¿Quién ha reconocido públicamente una falta alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_400",
+    "texto": "¿Quién suele minimizar sus logros?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_401",
+    "texto": "¿Quién es el/la más arrogante del grupo?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_402",
+    "texto": "¿Quién sería el/la primero/a en jactarse?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_403",
+    "texto": "¿Quién tiene más probabilidades de presumir?",
+    "categoria": "random",
+    "tipoSeleccion": "single",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_404",
+    "texto": "¿Quién ha alardado de sus logros alguna vez?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  },
+  {
+    "id": "q_405",
+    "texto": "¿Quién suele exagerar sus capacidades?",
+    "categoria": "random",
+    "tipoSeleccion": "multiple",
+    "nsfw": false,
+    "activa": true
+  }
+]
