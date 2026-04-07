@@ -9,16 +9,15 @@ type Props = {
   token: string;
   pollId: string;
   identityLabel: string;
-  onPoll: (params: {
+  onGroupList: (params: {
     token: string;
-    pollId: string;
     userName?: string | null;
     avatarColor?: string | null;
     avatarImage?: string | null;
   }) => void;
 };
 
-const OnboardingScreen: React.FC<Props> = ({ token, pollId, identityLabel, onPoll }) => {
+const OnboardingScreen: React.FC<Props> = ({ token, pollId, identityLabel, onGroupList }) => {
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -33,9 +32,8 @@ const OnboardingScreen: React.FC<Props> = ({ token, pollId, identityLabel, onPol
     try {
       const { data } = await api.saveUserName(token, name.trim());
 
-      onPoll({
+      onGroupList({
         token,
-        pollId,
         userName: data.name,
         avatarColor: data.avatarColor,
         avatarImage: data.avatarImage

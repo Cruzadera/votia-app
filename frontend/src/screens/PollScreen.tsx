@@ -38,6 +38,9 @@ const PollScreen: React.FC<Props> = ({ token, pollId, userName, avatarColor, ava
       const { data } = await api.getPoll(token, pollId);
       setPoll(data);
       setSelectedOption(data.userVote?.optionId || '');
+      if (data.userVote) {
+        onResults(data);
+      }
     } catch (error) {
       console.error('Error cargando encuesta', error);
       Alert.alert('Error', 'No se pudo obtener la encuesta.');

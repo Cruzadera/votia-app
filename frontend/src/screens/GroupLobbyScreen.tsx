@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Alert, Share, StyleSheet, Text, View } from 'react-native';
 import AppShell from '../components/ui/AppShell';
 import ProfileIconButton from '../components/ui/ProfileIconButton';
@@ -11,6 +11,13 @@ type Props = {
   userName?: string | null;
   avatarColor?: string | null;
   avatarImage?: string | null;
+  initialGroup?: {
+    id: string;
+    name: string;
+    inviteCode: string;
+    memberCount: number;
+    pollReady: boolean;
+  };
   onPoll: (params: {
     token: string;
     pollId: string;
@@ -18,10 +25,20 @@ type Props = {
     avatarColor?: string | null;
     avatarImage?: string | null;
   }) => void;
+  onBack: () => void;
   onProfile: () => void;
 };
 
-const GroupLobbyScreen: React.FC<Props> = ({ token, userName, avatarColor, avatarImage, onPoll, onProfile }) => {
+const GroupLobbyScreen: React.FC<Props> = ({
+  token,
+  userName,
+  avatarColor,
+  avatarImage,
+  initialGroup,
+  onPoll,
+  onBack,
+  onProfile
+}) => {
   const [groupName, setGroupName] = useState('');
   const [inviteCode, setInviteCode] = useState('');
   const [loading, setLoading] = useState(false);
@@ -31,7 +48,11 @@ const GroupLobbyScreen: React.FC<Props> = ({ token, userName, avatarColor, avata
     inviteCode: string;
     memberCount: number;
     pollReady: boolean;
-  } | null>(null);
+  } | null>(initialGroup ?? null);
+
+  useEffect(() => {
+    setCreatedGroup(initialGroup ?? null);
+  }, [initialGroup]);
 
   const handleCreate = async () => {
     if (!groupName.trim()) {
@@ -112,55 +133,83 @@ const GroupLobbyScreen: React.FC<Props> = ({ token, userName, avatarColor, avata
 
   return (
     <AppShell
-      eyebrow="Grupos"
-      title={userName ? `Hola ${userName}` : 'Tu grupo'}
-      subtitle="En modo standalone entras primero a un grupo y desde ahí te llevamos a la encuesta activa del día."
+      eyebrow={initialGroup ? 'Grupo' : 'Nuevo grupo'}
+      title={initialGroup ? initialGroup.name : (userName ? `Hola ${userName}` : 'Tu grupo')}
+      subtitle={
+        initialGroup
+          ? initialGroup.pollReady
+            ? 'Este grupo ya tiene encuesta activa.'
+            : 'Invita a más personas para activar la encuesta diaria.'
+          : 'Crea un grupo nuevo o únete a uno existente con un código.'
+      }
       headerAction={<ProfileIconButton name={userName} avatarColor={avatarColor} avatarImage={avatarImage} onPress={onProfile} />}
     >
+      {/* Vista de grupo existente (llegando desde GroupList) */}
       {createdGroup ? (
-        <View style={styles.shareCard}>
-          <Text style={styles.shareTitle}>{createdGroup.name}</Text>
-          <Text style={styles.shareCode}>{createdGroup.inviteCode}</Text>
-          <Text style={styles.shareHint}>
-            {createdGroup.pollReady
-              ? `Encuesta activa para ${createdGroup.memberCount} personas.`
-              : `Faltan personas. Miembros actuales: ${createdGroup.memberCount}.`}
-          </Text>
-          <PrimaryButton title="Compartir grupo" onPress={handleShareGroup} variant="secondary" />
-        </View>
+        <>
+          <View style={styles.shareCard}>
+            <Text style={styles.shareCodeLabel}>Código de invitación</Text>
+            <Text style={styles.shareCode}>{createdGroup.inviteCode}</Text>
+            <Text style={styles.shareHint}>
+              {createdGroup.pollReady
+                ? `Encuesta activa · ${createdGroup.memberCount} miembros`
+                : `${createdGroup.memberCount} ${createdGroup.memberCount === 1 ? 'miembro' : 'miembros'} · necesita al menos 2`}
+            </Text>
+            <PrimaryButton title="Compartir código de invitación" onPress={handleShareGroup} />
+          </View>
+
+          <PrimaryButton
+            title="Volver a mis grupos"
+            onPress={onBack}
+            variant="secondary"
+            style={styles.backButton}
+          />
+        </>
       ) : null}
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Crear grupo</Text>
-        <FieldInput
-          label="Nombre del grupo"
-          placeholder="Ej. Piso, amigos, oficina"
-          value={groupName}
-          onChangeText={setGroupName}
-        />
-        <PrimaryButton title={loading ? 'Creando...' : 'Crear grupo'} onPress={handleCreate} loading={loading} />
-      </View>
+      {/* Vista de crear/unirse (sin grupo seleccionado) */}
+      {!createdGroup ? (
+        <>
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>Crear grupo</Text>
+            <FieldInput
+              label="Nombre del grupo"
+              placeholder="Ej. Piso, amigos, oficina"
+              value={groupName}
+              onChangeText={setGroupName}
+            />
+            <PrimaryButton title={loading ? 'Creando...' : 'Crear grupo'} onPress={handleCreate} loading={loading} />
+          </View>
 
-      <View style={styles.divider} />
+          <View style={styles.divider} />
 
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Unirse con código</Text>
-        <FieldInput
-          label="Código"
-          placeholder="ABC123"
-          value={inviteCode}
-          onChangeText={setInviteCode}
-          autoCapitalize="characters"
-          autoCorrect={false}
-        />
-        <PrimaryButton
-          title={loading ? 'Uniéndote...' : 'Unirse al grupo'}
-          onPress={handleJoin}
-          variant="secondary"
-          loading={loading}
-          disabled={!inviteCode.trim()}
-        />
-      </View>
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>Unirse con código</Text>
+            <FieldInput
+              label="Código"
+              placeholder="ABC123"
+              value={inviteCode}
+              onChangeText={setInviteCode}
+              autoCapitalize="characters"
+              autoCorrect={false}
+            />
+            <PrimaryButton
+              title={loading ? 'Uniéndote...' : 'Unirse al grupo'}
+              onPress={handleJoin}
+              variant="secondary"
+              loading={loading}
+              disabled={!inviteCode.trim()}
+            />
+          </View>
+
+          <PrimaryButton
+            title="Volver a mis grupos"
+            onPress={onBack}
+            variant="secondary"
+            style={styles.backButton}
+          />
+        </>
+      ) : null}
     </AppShell>
   );
 };
@@ -181,29 +230,34 @@ const styles = StyleSheet.create({
     marginVertical: 18
   },
   shareCard: {
-    padding: 18,
+    padding: 20,
     borderRadius: 24,
     backgroundColor: '#eef2ff',
-    marginBottom: 18
+    marginBottom: 16
   },
-  shareTitle: {
-    fontSize: 18,
-    fontWeight: '900',
-    color: '#13203a'
+  shareCodeLabel: {
+    fontSize: 12,
+    fontWeight: '800',
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+    color: '#607095',
+    marginBottom: 6
   },
   shareCode: {
-    marginTop: 8,
-    fontSize: 28,
+    fontSize: 32,
     fontWeight: '900',
-    letterSpacing: 2,
-    color: '#16203a'
+    letterSpacing: 3,
+    color: '#16203a',
+    marginBottom: 8
   },
   shareHint: {
-    marginTop: 8,
-    marginBottom: 14,
     fontSize: 14,
     lineHeight: 20,
-    color: '#5e6983'
+    color: '#5e6983',
+    marginBottom: 16
+  },
+  backButton: {
+    marginTop: 10
   }
 });
 

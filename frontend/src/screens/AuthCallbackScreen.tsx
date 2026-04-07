@@ -7,18 +7,19 @@ import PrimaryButton from '../components/ui/PrimaryButton';
 type Props = {
   token?: string;
   pollId?: string;
+  waGroupId?: string;
+  waGroupName?: string;
   onStandaloneFallback: () => void;
   onOnboarding: (params: { token: string; pollId: string; identityLabel: string }) => void;
-  onPoll: (params: {
+  onGroupList: (params: {
     token: string;
-    pollId: string;
     userName?: string | null;
     avatarColor?: string | null;
     avatarImage?: string | null;
   }) => void;
 };
 
-const AuthCallbackScreen: React.FC<Props> = ({ token = '', pollId = '', onStandaloneFallback, onOnboarding, onPoll }) => {
+const AuthCallbackScreen: React.FC<Props> = ({ token = '', pollId = '', waGroupId, waGroupName, onStandaloneFallback, onOnboarding, onGroupList }) => {
   const [loading, setLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -31,20 +32,19 @@ const AuthCallbackScreen: React.FC<Props> = ({ token = '', pollId = '', onStanda
       }
 
       try {
-        const { data } = await api.authenticateWhatsapp(token, pollId);
+        const { data } = await api.authenticateWhatsapp(token, pollId, waGroupId, waGroupName);
 
         if (data.nextStep === 'onboarding') {
           onOnboarding({
             token,
-            pollId,
+            pollId: data.pollId || pollId,
             identityLabel: 'Acceso de WhatsApp verificado'
           });
           return;
         }
 
-        onPoll({
+        onGroupList({
           token,
-          pollId,
           userName: data.user.name,
           avatarColor: data.user.avatarColor,
           avatarImage: data.user.avatarImage
@@ -58,7 +58,7 @@ const AuthCallbackScreen: React.FC<Props> = ({ token = '', pollId = '', onStanda
     };
 
     bootstrap();
-  }, [onOnboarding, onPoll, pollId, token]);
+  }, [onOnboarding, onGroupList, pollId, token, waGroupId, waGroupName]);
 
   return (
     <AppShell

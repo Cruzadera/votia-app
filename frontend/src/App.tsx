@@ -3,6 +3,7 @@ import 'react-native-gesture-handler';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Linking } from 'react-native';
 import AuthCallbackScreen from './screens/AuthCallbackScreen';
+import GroupListScreen from './screens/GroupListScreen';
 import GroupLobbyScreen from './screens/GroupLobbyScreen';
 import HomeScreen from './screens/HomeScreen';
 import OnboardingScreen from './screens/OnboardingScreen';
@@ -15,8 +16,22 @@ import { PollResponse } from './services/api';
 type ScreenState =
   | { name: 'Home' }
   | { name: 'StandaloneAccess' }
-  | { name: 'GroupLobby'; token: string; userName?: string | null; avatarColor?: string | null; avatarImage?: string | null }
-  | { name: 'AuthCallback'; token?: string; pollId?: string }
+  | { name: 'GroupList'; token: string; userName?: string | null; avatarColor?: string | null; avatarImage?: string | null }
+  | {
+      name: 'GroupLobby';
+      token: string;
+      userName?: string | null;
+      avatarColor?: string | null;
+      avatarImage?: string | null;
+      initialGroup?: {
+        id: string;
+        name: string;
+        inviteCode: string;
+        memberCount: number;
+        pollReady: boolean;
+      };
+    }
+  | { name: 'AuthCallback'; token?: string; pollId?: string; waGroupId?: string; waGroupName?: string }
   | { name: 'Onboarding'; token: string; pollId: string; identityLabel: string }
   | { name: 'Poll'; token: string; pollId: string; userName?: string | null; avatarColor?: string | null; avatarImage?: string | null }
   | { name: 'Results'; token: string; poll: PollResponse; userName?: string | null; avatarColor?: string | null; avatarImage?: string | null }
@@ -26,7 +41,7 @@ type ScreenState =
       userName?: string | null;
       avatarColor?: string | null;
       avatarImage?: string | null;
-      returnTo: 'GroupLobby' | 'Poll' | 'Results';
+      returnTo: 'GroupList' | 'GroupLobby' | 'Poll' | 'Results';
       pollId?: string;
       poll?: PollResponse;
     };
@@ -41,9 +56,11 @@ const getStateFromUrl = (rawUrl?: string | null): ScreenState => {
     const path = parsed.pathname.replace(/^\/+/, '');
     const token = parsed.searchParams.get('token') || undefined;
     const pollId = parsed.searchParams.get('pollId') || undefined;
+    const waGroupId = parsed.searchParams.get('waGroupId') || undefined;
+    const waGroupName = parsed.searchParams.get('waGroupName') || undefined;
 
     if (path === 'auth/whatsapp' || rawUrl.includes('auth/whatsapp')) {
-      return { name: 'AuthCallback', token, pollId };
+      return { name: 'AuthCallback', token, pollId, waGroupId, waGroupName };
     }
 
     if (path === 'standalone') {
@@ -97,7 +114,28 @@ export default function App() {
       {screen.name === 'StandaloneAccess' ? (
         <StandaloneAccessScreen
           onHome={() => setScreen({ name: 'Home' })}
+          onGroupLobby={(params) => setScreen({ name: 'GroupList', ...params })}
+        />
+      ) : null}
+
+      {screen.name === 'GroupList' ? (
+        <GroupListScreen
+          token={screen.token}
+          userName={screen.userName}
+          avatarColor={screen.avatarColor}
+          avatarImage={screen.avatarImage}
           onGroupLobby={(params) => setScreen({ name: 'GroupLobby', ...params })}
+          onPoll={(params) => setScreen({ name: 'Poll', ...params })}
+          onProfile={() =>
+            setScreen({
+              name: 'Profile',
+              token: screen.token,
+              userName: screen.userName,
+              avatarColor: screen.avatarColor,
+              avatarImage: screen.avatarImage,
+              returnTo: 'GroupList'
+            })
+          }
         />
       ) : null}
 
@@ -107,7 +145,17 @@ export default function App() {
           userName={screen.userName}
           avatarColor={screen.avatarColor}
           avatarImage={screen.avatarImage}
+          initialGroup={screen.initialGroup}
           onPoll={(params) => setScreen({ name: 'Poll', ...params })}
+          onBack={() =>
+            setScreen({
+              name: 'GroupList',
+              token: screen.token,
+              userName: screen.userName,
+              avatarColor: screen.avatarColor,
+              avatarImage: screen.avatarImage
+            })
+          }
           onProfile={() =>
             setScreen({
               name: 'Profile',
@@ -115,7 +163,8 @@ export default function App() {
               userName: screen.userName,
               avatarColor: screen.avatarColor,
               avatarImage: screen.avatarImage,
-              returnTo: 'GroupLobby'
+              returnTo: 'GroupLobby',
+              poll: undefined
             })
           }
         />
@@ -125,9 +174,11 @@ export default function App() {
         <AuthCallbackScreen
           token={screen.token}
           pollId={screen.pollId}
+          waGroupId={screen.waGroupId}
+          waGroupName={screen.waGroupName}
           onStandaloneFallback={() => setScreen({ name: 'StandaloneAccess' })}
           onOnboarding={(params) => setScreen({ name: 'Onboarding', ...params })}
-          onPoll={(params) => setScreen({ name: 'Poll', ...params })}
+          onGroupList={(params) => setScreen({ name: 'GroupList', ...params })}
         />
       ) : null}
 
@@ -136,7 +187,7 @@ export default function App() {
           token={screen.token}
           pollId={screen.pollId}
           identityLabel={screen.identityLabel}
-          onPoll={(params) => setScreen({ name: 'Poll', ...params })}
+          onGroupList={(params) => setScreen({ name: 'GroupList', ...params })}
         />
       ) : null}
 
@@ -179,9 +230,8 @@ export default function App() {
           avatarImage={screen.avatarImage}
           onBack={() =>
             setScreen({
-              name: 'Poll',
+              name: 'GroupList',
               token: screen.token,
-              pollId: screen.poll.id,
               userName: screen.userName,
               avatarColor: screen.avatarColor,
               avatarImage: screen.avatarImage
@@ -209,6 +259,17 @@ export default function App() {
           initialAvatarColor={screen.avatarColor}
           initialAvatarImage={screen.avatarImage}
           onBack={() => {
+            if (screen.returnTo === 'GroupList') {
+              setScreen({
+                name: 'GroupList',
+                token: screen.token,
+                userName: screen.userName,
+                avatarColor: screen.avatarColor,
+                avatarImage: screen.avatarImage
+              });
+              return;
+            }
+
             if (screen.returnTo === 'GroupLobby') {
               setScreen({
                 name: 'GroupLobby',
@@ -242,6 +303,17 @@ export default function App() {
             });
           }}
           onSaved={(params) => {
+            if (screen.returnTo === 'GroupList') {
+              setScreen({
+                name: 'GroupList',
+                token: screen.token,
+                userName: params.userName,
+                avatarColor: params.avatarColor,
+                avatarImage: params.avatarImage
+              });
+              return;
+            }
+
             if (screen.returnTo === 'GroupLobby') {
               setScreen({
                 name: 'GroupLobby',

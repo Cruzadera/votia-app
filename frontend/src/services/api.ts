@@ -87,8 +87,7 @@ export type PollResponse = {
 };
 
 export type AccessResponse = {
-  nextStep: 'poll' | 'onboarding';
-  redirectTo: string;
+  nextStep: 'groupList' | 'onboarding';
   token: string;
   user: {
     id: string;
@@ -98,29 +97,13 @@ export type AccessResponse = {
     avatarImage: string | null;
     createdAt: string;
   };
-  poll: {
+  groups: Array<{
     id: string;
-    question: {
-      id: string;
-      text: string;
-      category: string;
-      selectionType: string;
-      nsfw: boolean;
-      active: boolean;
-    };
-    options: Array<{
-      id: string;
-      user: {
-        id: string;
-        name: string | null;
-        phone: string | null;
-        avatarColor: string | null;
-        avatarImage: string | null;
-      };
-    }>;
-    expiresAt: string | null;
-    createdAt: string;
-  };
+    name: string;
+    inviteCode: string;
+    whatsappGroupId: string | null;
+  }>;
+  pollId: string | null;
 };
 
 export type StandaloneAccessResponse = {
@@ -158,10 +141,25 @@ export type GroupAccessResponse = {
   pollReady: boolean;
 };
 
+export type GroupSummary = {
+  id: string;
+  name: string;
+  inviteCode: string;
+  memberCount: number;
+  pollReady: boolean;
+  poll: {
+    id: string;
+  } | null;
+};
+
+export type GroupListResponse = {
+  groups: GroupSummary[];
+};
+
 export default {
-  authenticateWhatsapp: (token: string, pollId: string) =>
+  authenticateWhatsapp: (token: string, pollId: string, waGroupId?: string, waGroupName?: string) =>
     api.get<AccessResponse>('/auth/whatsapp', {
-      params: { token, pollId }
+      params: { token, pollId, waGroupId, waGroupName }
     }),
   loginStandalone: (payload: { name: string }) =>
     api.post<StandaloneAccessResponse>('/auth/standalone', payload),
@@ -172,6 +170,7 @@ export default {
     api.post<UserProfileResponse>('/user/profile', payload, authHeaders(token)),
   createGroup: (token: string, name: string) =>
     api.post<GroupAccessResponse>('/groups', { name }, authHeaders(token)),
+  listGroups: (token: string) => api.get<GroupListResponse>('/groups', authHeaders(token)),
   joinGroup: (token: string, inviteCode: string) =>
     api.post<GroupAccessResponse>('/groups/join', { inviteCode }, authHeaders(token)),
   getPoll: (token: string, pollId: string) =>

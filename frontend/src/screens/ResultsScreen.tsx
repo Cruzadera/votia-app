@@ -2,6 +2,7 @@ import React from 'react';
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import AppShell from '../components/ui/AppShell';
 import AvatarStack from '../components/results/AvatarStack';
+import PrimaryButton from '../components/ui/PrimaryButton';
 import { ResultVoter } from '../components/results/types';
 import ProfileIconButton from '../components/ui/ProfileIconButton';
 import { PollResponse } from '../services/api';
@@ -82,9 +83,7 @@ const ResultsScreen: React.FC<Props> = ({ poll, userName, avatarColor, avatarIma
         )}
 
         <View style={styles.backCard}>
-          <Text style={styles.backText} onPress={onBack}>
-            Volver a la encuesta
-          </Text>
+          <PrimaryButton title="Mis grupos" onPress={onBack} variant="secondary" />
         </View>
       </ScrollView>
     </AppShell>
@@ -152,12 +151,6 @@ const styles = StyleSheet.create({
   },
   backCard: {
     paddingTop: 20
-  },
-  backText: {
-    textAlign: 'center',
-    fontSize: 15,
-    fontWeight: '800',
-    color: '#233257'
   }
 });
 

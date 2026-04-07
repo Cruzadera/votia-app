@@ -21,12 +21,13 @@ model User {
 }
 
 model Group {
-  id          String        @id @default(uuid())
-  name        String
-  inviteCode  String        @unique
-  memberships GroupMember[]
-  polls       Poll[]
-  createdAt   DateTime      @default(now())
+  id               String        @id @default(uuid())
+  name             String
+  inviteCode       String        @unique
+  whatsappGroupId  String?       @unique
+  memberships      GroupMember[]
+  polls            Poll[]
+  createdAt        DateTime      @default(now())
 }
 
 model GroupMember {

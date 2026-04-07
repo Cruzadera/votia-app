@@ -6,17 +6,22 @@ type Props = {
   title: string;
   subtitle?: string;
   headerAction?: React.ReactNode;
+  refreshControl?: React.ReactElement;
   children: React.ReactNode;
 };
 
-const AppShell: React.FC<Props> = ({ eyebrow, title, subtitle, headerAction, children }) => {
+const AppShell: React.FC<Props> = ({ eyebrow, title, subtitle, headerAction, refreshControl, children }) => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.backgroundHaloTop} />
       <View style={styles.backgroundHaloMiddle} />
       <View style={styles.backgroundHaloBottom} />
 
-      <ScrollView contentContainerStyle={styles.scrollContent} keyboardShouldPersistTaps="handled">
+      <ScrollView
+        contentContainerStyle={styles.scrollContent}
+        keyboardShouldPersistTaps="handled"
+        refreshControl={refreshControl}
+      >
         <View style={styles.header}>
           {headerAction ? <View style={styles.headerAction}>{headerAction}</View> : null}
           {eyebrow ? <Text style={styles.eyebrow}>{eyebrow}</Text> : null}
@@ -37,9 +42,9 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     flexGrow: 1,
-    justifyContent: 'center',
     paddingHorizontal: 18,
-    paddingVertical: 28
+    paddingTop: 28,
+    paddingBottom: 36
   },
   backgroundHaloTop: {
     position: 'absolute',
