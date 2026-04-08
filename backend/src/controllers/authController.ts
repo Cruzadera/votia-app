@@ -33,11 +33,10 @@ const createUniqueInviteCode = async () => {
 
 /**
  * Si viene con waGroupId, asocia el grupo de WhatsApp con un grupo en la BD
- * (lo crea la primera vez). Si no, garantiza que el usuario tenga al menos un grupo.
+ * (lo crea la primera vez).
  */
 const ensureGroupMembership = async (
   userId: string,
-  userName: string | null,
   waGroupId: string | null,
   waGroupName: string | null
 ) => {
@@ -76,21 +75,7 @@ const ensureGroupMembership = async (
     select: { group: { select: { id: true } } }
   });
 
-  if (existingMembership?.group) {
-    return existingMembership.group;
-  }
-
-  const inviteCode = await createUniqueInviteCode();
-  const fallbackName = userName?.trim() ? `Grupo de ${userName.trim()}` : 'Grupo nuevo';
-
-  return prisma.group.create({
-    data: {
-      name: fallbackName,
-      inviteCode,
-      memberships: { create: { userId } }
-    },
-    select: { id: true }
-  });
+  return existingMembership?.group ?? null;
 };
 
 export const whatsappAutologinHandler = async (req: Request, res: Response) => {
@@ -113,7 +98,7 @@ export const whatsappAutologinHandler = async (req: Request, res: Response) => {
       create: { authKey }
     });
 
-    await ensureGroupMembership(user.id, user.name, waGroupId || null, waGroupName || null);
+    await ensureGroupMembership(user.id, waGroupId || null, waGroupName || null);
 
     const memberships = await prisma.groupMember.findMany({
       where: { userId: user.id },
@@ -201,6 +186,52 @@ export const startEmailLoginHandler = async (req: Request, res: Response) => {
   }
 
   try {
+    const authSubject = `email:${email}`;
+    const authKey = deriveAuthKey(authSubject);
+    const existingUser = await prisma.user.findUnique({
+      where: { email },
+      select: {
+        id: true,
+        authKey: true,
+        name: true,
+        avatarColor: true,
+        avatarImage: true,
+        createdAt: true
+      }
+    });
+
+    // If the email is already known and compatible with our auth subject,
+    // skip sending a new verification email and grant direct access.
+    if (existingUser && (!existingUser.authKey || existingUser.authKey === authKey)) {
+      const user = await prisma.user.update({
+        where: { id: existingUser.id },
+        data: {
+          authKey,
+          email
+        }
+      });
+
+      await ensureGroupMembership(user.id, waGroupId || null, waGroupName || null);
+
+      const appToken = createAutologinToken(authSubject);
+
+      return res.json({
+        ok: true,
+        directLogin: true,
+        token: appToken,
+        pollId: pollId || null,
+        user: {
+          id: user.id,
+          authKey: user.authKey,
+          name: user.name,
+          avatarColor: user.avatarColor,
+          avatarImage: user.avatarImage,
+          createdAt: user.createdAt
+        },
+        message: 'Acceso directo completado.'
+      });
+    }
+
     const rawToken = crypto.randomBytes(32).toString('hex');
     const tokenHash = hashOneTimeToken(rawToken);
     const expiresAt = new Date(Date.now() + 15 * 60 * 1000);
@@ -256,6 +287,7 @@ export const verifyEmailLoginHandler = async (req: Request, res: Response) => {
     const authSubject = `email:${emailToken.email}`;
     const authKey = deriveAuthKey(authSubject);
 
+    const nameFromEmail = emailToken.email.split('@')[0];
     const user = await prisma.user.upsert({
       where: { authKey },
       update: {
@@ -263,7 +295,8 @@ export const verifyEmailLoginHandler = async (req: Request, res: Response) => {
       },
       create: {
         authKey,
-        email: emailToken.email
+        email: emailToken.email,
+        name: nameFromEmail
       }
     });
 
@@ -274,7 +307,6 @@ export const verifyEmailLoginHandler = async (req: Request, res: Response) => {
 
     await ensureGroupMembership(
       user.id,
-      user.name,
       emailToken.waGroupId,
       emailToken.waGroupName
     );

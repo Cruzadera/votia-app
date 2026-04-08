@@ -4,6 +4,7 @@ import express from 'express';
 import { initDB } from './services/db';
 import authRoutes from './routes/authRoutes';
 import groupRoutes from './routes/groupRoutes';
+import internalRoutes from './routes/internalRoutes';
 import pollRoutes from './routes/pollRoutes';
 import questionRoutes from './routes/questionRoutes';
 import userRoutes from './routes/userRoutes';
@@ -25,6 +26,7 @@ app.use('/api/user', userRoutes);
 app.use('/api/questions', questionRoutes);
 app.use('/api/polls', pollRoutes);
 app.use('/api/votes', voteRoutes);
+app.use('/internal', internalRoutes);
 
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok' });

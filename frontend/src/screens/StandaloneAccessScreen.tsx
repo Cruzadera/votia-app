@@ -1,25 +1,77 @@
 import React, { useState } from 'react';
-import { Alert, StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Text } from 'react-native';
 import AppShell from '../components/ui/AppShell';
 import FieldInput from '../components/ui/FieldInput';
 import PrimaryButton from '../components/ui/PrimaryButton';
 import api from '../services/api';
 
-type Props = {
-  onHome: () => void;
+type AuthenticatedParams = {
+  token: string;
   pollId?: string;
+  userName?: string | null;
+  avatarColor?: string | null;
+  avatarImage?: string | null;
 };
 
-const StandaloneAccessScreen: React.FC<Props> = ({ onHome, pollId }) => {
+type Props = {
+  pollId?: string;
+  waGroupId?: string;
+  waGroupName?: string;
+  onAuthenticated?: (params: AuthenticatedParams) => void;
+};
+
+const StandaloneAccessScreen: React.FC<Props> = ({ pollId, waGroupId, waGroupName, onAuthenticated }) => {
+  const isWhatsAppFlow = !!waGroupId;
+
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
-  const [debugLoginUrl, setDebugLoginUrl] = useState<string | null>(null);
 
-  const handleAccess = async () => {
+  // ── WhatsApp flow: name only ──────────────────────────
+
+  const handleWhatsAppAccess = async () => {
+    if (!name.trim()) {
+      Alert.alert('Nombre requerido', 'Escribe tu nombre para continuar.');
+      return;
+    }
+
+    setErrorMessage('');
+    setLoading(true);
+
+    try {
+      const { data } = await api.loginStandalone({ name: name.trim() });
+      const token = data.token;
+
+      // Register group membership via the whatsapp autologin endpoint
+      if (waGroupId) {
+        try {
+          await api.authenticateWhatsapp(token, pollId, waGroupId, waGroupName);
+        } catch {
+          // Group registration failed but user is authenticated — continue
+        }
+      }
+
+      onAuthenticated?.({
+        token,
+        pollId,
+        userName: data.user.name,
+        avatarColor: data.user.avatarColor,
+        avatarImage: data.user.avatarImage,
+      });
+    } catch (error: any) {
+      const message = error?.response?.data?.message || error?.message || 'No se pudo entrar.';
+      setErrorMessage(message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // ── Email flow ────────────────────────────────────────
+
+  const handleEmailAccess = async () => {
     const normalizedEmail = email.trim().toLowerCase();
-
     if (!normalizedEmail || !normalizedEmail.includes('@')) {
       Alert.alert('Datos requeridos', 'Introduce un correo válido para continuar.');
       return;
@@ -27,41 +79,68 @@ const StandaloneAccessScreen: React.FC<Props> = ({ onHome, pollId }) => {
 
     setErrorMessage('');
     setSuccessMessage('');
-    setDebugLoginUrl(null);
     setLoading(true);
 
     try {
       const { data } = await api.startEmailLogin({
         email: normalizedEmail,
-        ...(pollId ? { pollId } : {})
+        ...(pollId ? { pollId } : {}),
       });
 
-      setSuccessMessage(data.message);
-      setDebugLoginUrl(data.debugLoginUrl || null);
-      Alert.alert('Revisa tu correo', data.message);
+      if (data.directLogin && data.token) {
+        onAuthenticated?.({
+          token: data.token,
+          pollId: data.pollId ?? pollId,
+          userName: data.user?.name,
+          avatarColor: data.user?.avatarColor,
+          avatarImage: data.user?.avatarImage,
+        });
+        return;
+      }
+
+      setSuccessMessage(`Revisa tu bandeja de entrada (${normalizedEmail}).`);
     } catch (error: any) {
-      console.error('Error acceso por email', error);
-      const message =
-        error?.response?.data?.message ||
-        error?.message ||
-        'No se pudo iniciar el acceso por email.';
+      const message = error?.response?.data?.message || error?.message || 'No se pudo enviar el enlace.';
       setErrorMessage(message);
-      Alert.alert('Acceso no disponible', message);
     } finally {
       setLoading(false);
     }
   };
 
+  // ── Render ────────────────────────────────────────────
+
+  if (isWhatsAppFlow) {
+    return (
+      <AppShell
+        eyebrow="Acceso"
+        title="Entrar en Votia"
+        subtitle={waGroupName ? `Vienes del grupo "${decodeURIComponent(waGroupName)}"` : 'Acceso desde WhatsApp'}
+      >
+        <FieldInput
+          label="Tu nombre"
+          placeholder="Ej. María"
+          value={name}
+          onChangeText={setName}
+          autoCapitalize="words"
+          autoCorrect={false}
+        />
+        {errorMessage ? <Text style={styles.errorText}>{errorMessage}</Text> : null}
+        <PrimaryButton
+          title={loading ? 'Entrando...' : 'Entrar'}
+          onPress={handleWhatsAppAccess}
+          loading={loading}
+          disabled={!name.trim()}
+        />
+      </AppShell>
+    );
+  }
+
   return (
     <AppShell
       eyebrow="Acceso"
-      title="Entrar con email"
-      subtitle="Te enviamos un enlace mágico al correo. No necesitas contraseña ni depender de WhatsApp privado."
+      title="Entrar en Votia"
+      subtitle="Te enviamos un enlace al correo para acceder."
     >
-      <View style={styles.hintCard}>
-        <Text style={styles.hintTitle}>Cómo funciona</Text>
-        <Text style={styles.hintText}>1) Escribes tu email. 2) Te enviamos un enlace. 3) Al abrirlo quedas autenticado para votar.</Text>
-      </View>
       <FieldInput
         label="Email"
         placeholder="tu@email.com"
@@ -71,72 +150,23 @@ const StandaloneAccessScreen: React.FC<Props> = ({ onHome, pollId }) => {
         autoCorrect={false}
         keyboardType="email-address"
       />
-
-      {pollId ? (
-        <Text style={styles.contextText}>Accediendo a la encuesta: {pollId}</Text>
-      ) : null}
-
+      {pollId ? <Text style={styles.contextText}>Accediendo a la encuesta: {pollId}</Text> : null}
       {errorMessage ? <Text style={styles.errorText}>{errorMessage}</Text> : null}
       {successMessage ? <Text style={styles.successText}>{successMessage}</Text> : null}
-      {debugLoginUrl ? <Text style={styles.debugText}>DEBUG LINK: {debugLoginUrl}</Text> : null}
-
       <PrimaryButton
-        title={loading ? 'Enviando...' : 'Enviar enlace'}
-        onPress={handleAccess}
+        title={loading ? 'Comprobando...' : successMessage ? 'Verificar email' : 'Comprobar email'}
+        onPress={handleEmailAccess}
         loading={loading}
         disabled={!email.trim()}
       />
-      <PrimaryButton title="Volver" onPress={onHome} variant="secondary" style={styles.backButton} />
     </AppShell>
   );
 };
 
 const styles = StyleSheet.create({
-  hintCard: {
-    padding: 18,
-    borderRadius: 24,
-    backgroundColor: '#eef2ff',
-    marginBottom: 16
-  },
-  hintTitle: {
-    fontSize: 17,
-    fontWeight: '900',
-    color: '#16203a',
-    marginBottom: 6
-  },
-  hintText: {
-    fontSize: 14,
-    lineHeight: 21,
-    color: '#5e6983'
-  },
-  contextText: {
-    marginBottom: 10,
-    fontSize: 13,
-    color: '#475467'
-  },
-  backButton: {
-    marginTop: 10
-  },
-  errorText: {
-    marginBottom: 12,
-    color: '#b42318',
-    fontSize: 14,
-    lineHeight: 20,
-    fontWeight: '600'
-  },
-  successText: {
-    marginBottom: 12,
-    color: '#067647',
-    fontSize: 14,
-    lineHeight: 20,
-    fontWeight: '600'
-  },
-  debugText: {
-    marginBottom: 12,
-    color: '#344054',
-    fontSize: 12,
-    lineHeight: 18
-  }
+  contextText: { marginBottom: 10, fontSize: 13, color: '#475467' },
+  errorText: { marginBottom: 12, color: '#b42318', fontSize: 14, lineHeight: 20, fontWeight: '600' },
+  successText: { marginBottom: 12, color: '#067647', fontSize: 14, lineHeight: 20, fontWeight: '600' },
 });
 
 export default StandaloneAccessScreen;

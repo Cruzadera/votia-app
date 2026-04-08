@@ -123,6 +123,17 @@ export type EmailLoginStartResponse = {
   ok: boolean;
   message: string;
   debugLoginUrl?: string;
+  directLogin?: boolean;
+  token?: string;
+  pollId?: string | null;
+  user?: {
+    id: string;
+    authKey: string | null;
+    name: string | null;
+    avatarColor: string | null;
+    avatarImage: string | null;
+    createdAt: string;
+  };
 };
 
 export type UserProfileResponse = {
@@ -163,13 +174,13 @@ export type GroupListResponse = {
 };
 
 export default {
-  authenticateWhatsapp: (token: string, pollId: string, waGroupId?: string, waGroupName?: string) =>
+  authenticateWhatsapp: (token: string, pollId?: string, waGroupId?: string, waGroupName?: string) =>
     api.get<AccessResponse>('/auth/whatsapp', {
-      params: { token, pollId, waGroupId, waGroupName }
+      params: { token, ...(pollId ? { pollId } : {}), waGroupId, waGroupName }
     }),
   startEmailLogin: (payload: { email: string; pollId?: string; waGroupId?: string; waGroupName?: string }) =>
     api.post<EmailLoginStartResponse>('/auth/email/start', payload),
-  loginStandalone: (payload: { name: string }) =>
+  loginStandalone: (payload: { name: string; waGroupId?: string; waGroupName?: string }) =>
     api.post<StandaloneAccessResponse>('/auth/standalone', payload),
   getMe: (token: string) => api.get<UserProfileResponse>('/user/me', authHeaders(token)),
   saveUserName: (token: string, name: string) =>
