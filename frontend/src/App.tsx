@@ -10,6 +10,7 @@ import PollScreen from './screens/PollScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import ResultsScreen from './screens/ResultsScreen';
 import StandaloneAccessScreen from './screens/StandaloneAccessScreen';
+import EmailVerifiedScreen from './screens/EmailVerifiedScreen';
 import api, { PollResponse } from './services/api';
 import { clearToken, loadToken, saveToken } from './utils/session';
 
@@ -31,6 +32,7 @@ type ScreenState =
         pollReady: boolean;
       };
     }
+  | { name: 'EmailVerified'; token?: string; pollId?: string; waGroupId?: string; waGroupName?: string; email?: string }
   | { name: 'AuthCallback'; token?: string; pollId?: string; waGroupId?: string; waGroupName?: string }
   | { name: 'Onboarding'; token: string; pollId: string; identityLabel: string }
   | { name: 'Poll'; token: string; pollId: string; userName?: string | null; avatarColor?: string | null; avatarImage?: string | null }
@@ -63,6 +65,11 @@ const getStateFromUrl = (rawUrl?: string | null): ScreenState => {
     const pollId = getParam('pollId');
     const waGroupId = getParam('waGroupId');
     const waGroupName = getParam('waGroupName');
+    const email = getParam('email');
+
+    if (path === 'auth/email/verified' || rawUrl.includes('auth/email/verified')) {
+      return { name: 'EmailVerified', token, pollId, waGroupId, waGroupName, email };
+    }
 
     if (path === 'auth/whatsapp' || rawUrl.includes('auth/whatsapp')) {
       return { name: 'AuthCallback', token, pollId, waGroupId, waGroupName };
@@ -112,7 +119,7 @@ export default function App() {
       const urlState = getStateFromUrl(initialUrl);
 
       // If the URL carries an auth token, honour it — don't restore the session.
-      if (urlState.name === 'AuthCallback') {
+      if (urlState.name === 'AuthCallback' || urlState.name === 'EmailVerified') {
         if (mounted) setScreen(urlState);
         cleanUrl();
         return;
@@ -259,6 +266,23 @@ export default function App() {
             saveToken(params.token);
             setScreen({ name: 'GroupList', ...params });
           }}
+        />
+      ) : null}
+
+      {screen.name === 'EmailVerified' ? (
+        <EmailVerifiedScreen
+          token={screen.token}
+          email={screen.email}
+          onFallback={() => setScreen({ name: 'StandaloneAccess' })}
+          onContinue={() =>
+            setScreen({
+              name: 'AuthCallback',
+              token: screen.token,
+              pollId: screen.pollId,
+              waGroupId: screen.waGroupId,
+              waGroupName: screen.waGroupName,
+            })
+          }
         />
       ) : null}
 

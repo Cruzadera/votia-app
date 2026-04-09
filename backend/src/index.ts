@@ -15,8 +15,21 @@ dotenv.config();
 
 const app = express();
 const port = Number(process.env.PORT || 3001);
+const corsOrigin = process.env.CORS_ORIGIN ?? process.env.FRONTEND_URL;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: corsOrigin
+      ? (origin, callback) => {
+          if (!origin || origin === corsOrigin) {
+            callback(null, true);
+            return;
+          }
+          callback(new Error('Origen no permitido por CORS'));
+        }
+      : true,
+  }),
+);
 app.use(express.json());
 
 app.use('/auth', authRoutes);

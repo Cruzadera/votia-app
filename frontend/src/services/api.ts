@@ -25,7 +25,8 @@ const getExpoHost = () => {
 
 const detectedHost = getExpoHost();
 const fallbackHost = Platform.OS === 'android' ? '10.0.2.2' : 'localhost';
-const apiBaseUrl = envApiUrl || `http://${detectedHost || fallbackHost}:3001/api`;
+const apiBaseUrl = envApiUrl
+  || (Platform.OS === 'web' ? '/api' : `http://${detectedHost || fallbackHost}:3001/api`);
 
 console.log('[api] baseURL', apiBaseUrl);
 
@@ -42,6 +43,7 @@ const authHeaders = (token: string) => ({
 
 export type PollResponse = {
   id: string;
+  currentUserId: string;
   question: string;
   questionMeta: {
     id: string;
@@ -106,19 +108,6 @@ export type AccessResponse = {
   pollId: string | null;
 };
 
-export type StandaloneAccessResponse = {
-  nextStep: 'groupLobby';
-  token: string;
-  user: {
-    id: string;
-    authKey: string | null;
-    name: string | null;
-    avatarColor: string | null;
-    avatarImage: string | null;
-    createdAt: string;
-  };
-};
-
 export type EmailLoginStartResponse = {
   ok: boolean;
   message: string;
@@ -178,10 +167,10 @@ export default {
     api.get<AccessResponse>('/auth/whatsapp', {
       params: { token, ...(pollId ? { pollId } : {}), waGroupId, waGroupName }
     }),
+  startWhatsappAccess: (payload: { name: string; pollId?: string; waGroupId?: string; waGroupName?: string }) =>
+    api.post<AccessResponse>('/auth/whatsapp', payload),
   startEmailLogin: (payload: { email: string; pollId?: string; waGroupId?: string; waGroupName?: string }) =>
     api.post<EmailLoginStartResponse>('/auth/email/start', payload),
-  loginStandalone: (payload: { name: string; waGroupId?: string; waGroupName?: string }) =>
-    api.post<StandaloneAccessResponse>('/auth/standalone', payload),
   getMe: (token: string) => api.get<UserProfileResponse>('/user/me', authHeaders(token)),
   saveUserName: (token: string, name: string) =>
     api.post('/user/name', { name }, authHeaders(token)),

@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import prisma from '../services/db';
 import { createAutologinToken, deriveAuthKey } from '../utils/token';
+import { resolveDailyPollForGroupBySource } from '../services/pollFactory';
 
 const router = Router();
 
@@ -48,8 +49,15 @@ router.post('/bot/access-link', requireBotSecret, async (req: Request, res: Resp
     // Ensure group exists
     const existing = await prisma.group.findUnique({
       where: { whatsappGroupId: waGroupId },
-      select: { id: true }
+      select: { id: true, name: true }
     });
+
+    if (existing && waGroupName && existing.name !== waGroupName) {
+      await prisma.group.update({
+        where: { id: existing.id },
+        data: { name: waGroupName }
+      });
+    }
 
     const groupId = existing
       ? existing.id
@@ -64,14 +72,24 @@ router.post('/bot/access-link', requireBotSecret, async (req: Request, res: Resp
           })
         ).id;
 
+    const resolvedPoll = pollId
+      ? { id: pollId }
+      : await resolveDailyPollForGroupBySource(groupId, 'whatsapp');
+    const resolvedPollId = resolvedPoll?.id;
+
+    if (!resolvedPollId) {
+      return res.status(500).json({ error: 'No se pudo generar la encuesta del grupo.' });
+    }
+
     // Build the shared poll URL using hash fragment to keep URL clean for WhatsApp
-    const baseUrl = `${frontendUrl}/poll/${pollId || ''}`;
+    const baseUrl = `${frontendUrl}/poll/${resolvedPollId}`;
     const hashParams = new URLSearchParams();
     hashParams.set('waGroupId', waGroupId);
     if (waGroupName) hashParams.set('waGroupName', waGroupName);
 
     return res.json({
       groupId,
+      pollId: resolvedPollId,
       url: `${baseUrl}#${hashParams.toString()}`
     });
   } catch (error) {

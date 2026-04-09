@@ -83,7 +83,7 @@ const PollScreen: React.FC<Props> = ({ token, pollId, userName, avatarColor, ava
   };
 
   const voteLocked = !!poll?.userVote || !!poll?.expired;
-  const visibleOptions = poll?.options.filter((option) => option.label !== userName) || [];
+  const visibleOptions = poll?.options.filter((option) => option.userId !== poll.currentUserId) || [];
 
   return (
     <AppShell
@@ -137,7 +137,7 @@ const PollScreen: React.FC<Props> = ({ token, pollId, userName, avatarColor, ava
                         uri: getAvatarUri({
                           name: option.label,
                           avatarImage: option.user.avatarImage,
-                          avatarColor: active ? color : option.user.avatarColor || color,
+                          avatarColor: option.user.avatarColor,
                           color: active ? 'ffffff' : color
                         })
                       }}

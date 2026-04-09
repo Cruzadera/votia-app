@@ -41,21 +41,16 @@ const StandaloneAccessScreen: React.FC<Props> = ({ pollId, waGroupId, waGroupNam
     setLoading(true);
 
     try {
-      const { data } = await api.loginStandalone({ name: name.trim() });
-      const token = data.token;
-
-      // Register group membership via the whatsapp autologin endpoint
-      if (waGroupId) {
-        try {
-          await api.authenticateWhatsapp(token, pollId, waGroupId, waGroupName);
-        } catch {
-          // Group registration failed but user is authenticated — continue
-        }
-      }
+      const { data } = await api.startWhatsappAccess({
+        name: name.trim(),
+        ...(pollId ? { pollId } : {}),
+        ...(waGroupId ? { waGroupId } : {}),
+        ...(waGroupName ? { waGroupName } : {}),
+      });
 
       onAuthenticated?.({
-        token,
-        pollId,
+        token: data.token,
+        pollId: data.pollId || pollId,
         userName: data.user.name,
         avatarColor: data.user.avatarColor,
         avatarImage: data.user.avatarImage,
